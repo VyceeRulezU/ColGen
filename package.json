@@ -1,5 +1,6 @@
 {
-  "name": "temp-app",
+  "name": "colgen",
+  "homepage": "https://vyceerulezu.github.io/ColGen",
   "private": true,
   "version": "0.0.0",
   "type": "module",
