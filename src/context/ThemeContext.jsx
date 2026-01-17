@@ -16,7 +16,7 @@ export const ThemeProvider = ({ children }) => {
   const [categoryModes, setCategoryModes] = useState({}); 
 
   // CHANGE THE BACKGROUND IMAGE URL HERE
-  const [backgroundUrl, setBackgroundUrl] = useState("/bg-image.jpg");
+  const [backgroundUrl, setBackgroundUrl] = useState("bg-image.jpg");
 
   useEffect(() => {
     // Initial Theme

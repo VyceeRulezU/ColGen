@@ -42,7 +42,7 @@ const Header = ({ onOpenSettings }) => {
         }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                 <img 
-                    src="/logo.png" 
+                    src="logo.png" 
                     alt="ColorGenius Logo" 
                     style={{ 
                         height: '40px', 
