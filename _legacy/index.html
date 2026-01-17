@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Preconnect for fonts if we were using external ones, but we use system fonts -->
+  </head>
+  <body>
+    <div class="background-blur"></div>
+    <main class="app-container">
+      <header>
+        <h1>Colors</h1>
+        <p>Tap to copy</p>
+      </header>
+
+      <div class="grid-container" id="color-grid">
+        <!-- Colors will be injected here via JS -->
+        <div class="color-card skeleton"></div>
+        <div class="color-card skeleton"></div>
+        <div class="color-card skeleton"></div>
+        <div class="color-card skeleton"></div>
+        <div class="color-card skeleton"></div>
+        <div class="color-card skeleton"></div>
+      </div>
+
+      <div class="controls">
+        <button id="generate-btn" class="glass-button">
+          <span class="icon">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"
+              ></path>
+              <line x1="16" y1="5" x2="22" y2="5"></line>
+              <line x1="19" y1="2" x2="19" y2="8"></line>
+            </svg>
+          </span>
+          Generate Palette
+        </button>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
