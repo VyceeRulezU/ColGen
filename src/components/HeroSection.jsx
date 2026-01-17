@@ -69,29 +69,53 @@ const HeroSection = () => {
                         fontFamily: 'inherit'
                     }}
                 />
-                <button
-                    onClick={handleGenerate}
-                    disabled={loading}
-                    style={{
-                        position: 'absolute',
-                        bottom: '1rem',
-                        right: '1rem',
-                        background: 'var(--text-primary)',
-                        color: 'var(--bg-color)',
-                        border: 'none',
-                        borderRadius: '12px',
-                        padding: '0.8rem 1.2rem',
-                        cursor: loading ? 'wait' : 'pointer',
-                        fontWeight: 600,
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '8px',
-                        opacity: loading ? 0.7 : 1,
-                        transition: 'transform 0.2s'
-                    }}
-                >
-                    {loading ? 'Thinking...' : <><span className="desktop-only-text" style={{ marginRight: '8px' }}>Generate</span><Sparkles size={18} /></>}
-                </button>
+                <div style={{
+                    position: 'absolute',
+                    bottom: '1rem',
+                    right: '1rem',
+                    display: 'flex',
+                    gap: '10px'
+                }}>
+                    <button
+                        onClick={useTheme().randomizeTheme}
+                        style={{
+                            background: 'rgba(255,255,255,0.1)',
+                            color: 'white',
+                            border: '1px solid var(--glass-border)',
+                            borderRadius: '12px',
+                            padding: '0.8rem 1.2rem',
+                            cursor: 'pointer',
+                            fontWeight: 500,
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '8px',
+                            transition: 'all 0.2s'
+                        }}
+                    >
+                        <span className="desktop-only-text">Surprise Me</span>
+                        <ArrowRight size={18} />
+                    </button>
+                    <button
+                        onClick={handleGenerate}
+                        disabled={loading}
+                        style={{
+                            background: 'var(--text-primary)',
+                            color: 'var(--bg-color)',
+                            border: 'none',
+                            borderRadius: '12px',
+                            padding: '0.8rem 1.2rem',
+                            cursor: loading ? 'wait' : 'pointer',
+                            fontWeight: 600,
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '8px',
+                            opacity: loading ? 0.7 : 1,
+                            transition: 'transform 0.2s'
+                        }}
+                    >
+                        {loading ? 'Thinking...' : <><span className="desktop-only-text">Generate</span><Sparkles size={18} /></>}
+                    </button>
+                </div>
             </div>
             
             {/* Dark Mode Palette Toggle */}

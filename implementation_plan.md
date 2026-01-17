@@ -6,9 +6,17 @@ The user is experiencing 404 errors. Inspection reveals that `App.jsx` and `Them
 
 ### Configuration
 
-#### [MODIFY] [package.json](file:///c:/Users/USER/Downloads/Frontend%20Boot%20Camp/Color%20Generator/package.json)
-
 - Add `"homepage": "https://vyceerulezu.github.io/ColGen"`
+
+### Features
+
+#### [MODIFY] [ThemeContext.jsx](file:///c:/Users/USER/Downloads/Frontend%20Boot%20Camp/Color%20Generator/src/context/ThemeContext.jsx)
+
+- Add `randomizeTheme` function that generates a palette from a random hex code.
+
+#### [MODIFY] [HeroSection.jsx](file:///c:/Users/USER/Downloads/Frontend%20Boot%20Camp/Color%20Generator/src/components/HeroSection.jsx)
+
+- Add a "Surprise Me" button that calls `randomizeTheme` for instant generation without prompts.
 
 ## Verification Plan
 

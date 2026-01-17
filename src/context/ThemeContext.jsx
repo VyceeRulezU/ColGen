@@ -96,6 +96,14 @@ export const ThemeProvider = ({ children }) => {
       setTheme(newTheme);
   };
 
+  const randomizeTheme = () => {
+      const randomHex = '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
+      const newTheme = generateThemeFromHex(randomHex);
+      setTheme(newTheme);
+      setOriginalTheme(newTheme);
+      initializeModes(newTheme);
+  };
+
   const isDarkMode = Object.values(categoryModes).some(m => m === 'dark');
 
   return (
@@ -103,6 +111,7 @@ export const ThemeProvider = ({ children }) => {
         theme, 
         setTheme, 
         updateTheme, 
+        randomizeTheme,
         categoryModes, 
         toggleCategoryMode,
         togglePaletteMode, // Global switch
