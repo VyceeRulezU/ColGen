@@ -8,7 +8,14 @@ export const initializeGemini = (apiKey) => {
 
 export const generateThemeFromPrompt = async (prompt, apiKey) => {
   if (!genAI && apiKey) initializeGemini(apiKey);
-  if (!genAI) throw new Error("API Key required");
+  if (!genAI && apiKey) initializeGemini(apiKey);
+  
+  // If no API key, use fallback immediately
+  if (!genAI) {
+      console.warn("No API Key found, using heuristic fallback.");
+      const { generateHeuristicTheme } = await import("../utils/heuristic");
+      return generateHeuristicTheme(prompt);
+  }
 
   const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
