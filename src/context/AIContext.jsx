@@ -6,8 +6,7 @@ const AIContext = createContext();
 export const useAI = () => useContext(AIContext);
 
 export const AIProvider = ({ children }) => {
-  // Initialize with the provided key for testing purposes
-  const [apiKey, setApiKey] = useState(localStorage.getItem("gemini_api_key") || "AIzaSyCSWyjm-79yRod9-DJIeNL19VluT5yy-ps");
+  const [apiKey, setApiKey] = useState(localStorage.getItem("gemini_api_key") || "");
   const [chatHistory, setChatHistory] = useState([]);
   const [isConfigured, setIsConfigured] = useState(false);
 
