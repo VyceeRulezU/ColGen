@@ -15,8 +15,10 @@ const HeroSection = () => {
 
     const handleGenerate = async () => {
         if (!prompt) return;
-        if (!prompt) return;
-        // Proceed even without API key (Offline Mode)
+        if (!apiKey) {
+            addToast("Please set your Gemini API Key in settings first!", "error");
+            return;
+        }
 
         setLoading(true);
         try {
