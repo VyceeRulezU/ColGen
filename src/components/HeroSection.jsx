@@ -56,7 +56,7 @@ const HeroSection = () => {
                     onChange={(e) => setPrompt(e.target.value)}
                     style={{
                         width: '100%',
-                        minHeight: '100px',
+                        minHeight: '140px',
                         padding: '1.5rem',
                         paddingRight: '4rem',
                         borderRadius: '16px',
