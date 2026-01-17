@@ -15,7 +15,8 @@ export const ThemeProvider = ({ children }) => {
   // Track mode for each category: { primary: 'light', secondary: 'dark', ... }
   const [categoryModes, setCategoryModes] = useState({}); 
 
-  const [backgroundUrl, setBackgroundUrl] = useState("https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2672&auto=format&fit=crop");
+  // CHANGE THE BACKGROUND IMAGE URL HERE
+  const [backgroundUrl, setBackgroundUrl] = useState("/new-bg-image.jpg");
 
   useEffect(() => {
     // Initial Theme
